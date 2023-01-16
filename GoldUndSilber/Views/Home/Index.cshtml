@@ -1,0 +1,38 @@
+﻿@{
+	ViewData["Title"] = "Home Page";
+}
+
+<div class="h-100 p-5 bg-dark text-center rounded-3">
+	<h2 class="text-white">Willkommen bei den Preisabfrage</h2>
+</div>
+
+<hr />
+
+<div class="card text-center bg-dark text-white">
+	<div class="card-header">
+		<h5 class="card-title">Gold</h5>
+	</div>
+	<div class="card-body">
+		<img class="img-fluid card-img-top" style="width:100%; height:300px; object-fit:cover; object-position:50% 60%; " src="Images/DALL·E 2023-01-16 13.41.48 - 3d photorealistic gold bar with golden background.png">
+	</div>
+	<div class="card-footer">
+		<a class="btn btn-primary" asp-controller="Gold" asp-action="Index">Goldpreis abfragen</a>
+	</div>
+</div>
+
+<hr />
+
+<div class="card text-center bg-dark text-white">
+	<div class="card-header">
+		<h5 class="card-title">Silber</h5>
+	</div>
+	<div class="card-body">
+		<img class="img-fluid card-img-top" style="width:100%; height:300px; object-fit:cover; object-position:50% 50%; " src="Images/DALL·E 2023-01-16 13.42.25 - 3d photorealistic silver bar with silver background.png">
+	</div>
+	<div class="card-footer">
+		<a class="btn btn-primary" asp-controller="Silber" asp-action="Index">Silberpreis abfragen</a>
+	</div>
+</div>
+
+
+

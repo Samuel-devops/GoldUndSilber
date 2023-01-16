@@ -1,0 +1,26 @@
+﻿@model SilberModel
+
+<form class="form-control bg-dark text-white text-center row" asp-controller="Silber" asp-action="GetSilverPrice" method="post">
+	<legend>
+		<h2>Silberpreis</h2>
+	</legend>
+	<div class="col mb-2">
+		<label class="form-label" for="txtGrams">Gramm:</label>
+		@if (Model.Grams <= 0)
+		{
+			<input class="form-control" style="text-align:center;" type="text" id="txtGrams" name="Grams" placeholder="Gramm" autocomplete="off" />
+		}
+		@if (Model.Grams > 0)
+		{
+				<input class="form-control" style="text-align:center;" type="text" id="txtGrams" name="Grams" value="@Model.Grams" autocomplete="off" />
+		}
+	</div>
+
+	<div class="mb-2">
+		<label class="form-label" for="lblPrice">Preis:</label>
+		<label class="form-label h3" id="lblPrice">@Model.Price €</label>
+	</div>
+	<div>
+		<input class="btn btn-primary" type="submit" value="Preis abrufen" id="btnGetPrice" />
+	</div>
+</form>
