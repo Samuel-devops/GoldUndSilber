@@ -1,38 +1,20 @@
-﻿@{
-	ViewData["Title"] = "Home Page";
+@{
+	ViewData["Title"] = "Preisabfrage";
 }
 
-<div class="h-100 p-5 bg-dark text-center rounded-3">
-	<h2 class="text-white">Willkommen bei den Preisabfrage</h2>
-</div>
+<section class="hero">
+	<div class="eyebrow">Edelmetalle · Preisabfrage</div>
+	<h1>Der Wert von <em>Gold &amp; Silber</em>, auf den Gramm genau.</h1>
+	<p>Gib ein Gewicht ein und erhalte sofort den aktuellen Preis für Gold oder Silber.</p>
+</section>
 
-<hr />
-
-<div class="card text-center bg-dark text-white">
-	<div class="card-header">
-		<h5 class="card-title">Gold</h5>
-	</div>
-	<div class="card-body">
-		<img class="img-fluid card-img-top" style="width:100%; height:300px; object-fit:cover; object-position:50% 60%; " src="Images/DALL·E 2023-01-16 13.41.48 - 3d photorealistic gold bar with golden background.png">
-	</div>
-	<div class="card-footer">
-		<a class="btn btn-primary" asp-controller="Gold" asp-action="Index">Goldpreis abfragen</a>
-	</div>
-</div>
-
-<hr />
-
-<div class="card text-center bg-dark text-white">
-	<div class="card-header">
-		<h5 class="card-title">Silber</h5>
-	</div>
-	<div class="card-body">
-		<img class="img-fluid card-img-top" style="width:100%; height:300px; object-fit:cover; object-position:50% 50%; " src="Images/DALL·E 2023-01-16 13.42.25 - 3d photorealistic silver bar with silver background.png">
-	</div>
-	<div class="card-footer">
-		<a class="btn btn-primary" asp-controller="Silber" asp-action="Index">Silberpreis abfragen</a>
-	</div>
-</div>
-
-
-
+<section class="metal-grid">
+	<a class="metal-card" data-metal="gold" asp-controller="Gold" asp-action="Index">
+		<img src="~/Images/DALL·E 2023-01-16 13.41.48 - 3d photorealistic gold bar with golden background.png" alt="Goldbarren" style="object-position:50% 60%" />
+		<div class="body"><h2>Gold</h2><span class="cta">Goldpreis abfragen →</span></div>
+	</a>
+	<a class="metal-card" data-metal="silver" asp-controller="Silber" asp-action="Index">
+		<img src="~/Images/DALL·E 2023-01-16 13.42.25 - 3d photorealistic silver bar with silver background.png" alt="Silberbarren" />
+		<div class="body"><h2>Silber</h2><span class="cta">Silberpreis abfragen →</span></div>
+	</a>
+</section>
