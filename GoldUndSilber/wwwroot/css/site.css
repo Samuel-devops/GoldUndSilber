@@ -91,3 +91,8 @@ a { color: var(--accent-soft); text-decoration: none; }
 
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto !important; } }
 @media (max-width: 576px) { .hero { padding-top: 3.5rem; } .calc { margin: 2rem auto; padding: 1.75rem; } }
+@media (max-width: 480px) {
+  .brand { font-size: 1.3rem; }
+  .site-nav ul { gap: 1rem; }
+  .site-nav ul li:first-child { display: none; } /* Logo führt bereits zur Startseite */
+}
